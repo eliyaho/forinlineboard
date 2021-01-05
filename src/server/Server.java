@@ -30,7 +30,7 @@ public class Server {
         
        
         try {
-            ss = new ServerSocket(58);
+            ss = new ServerSocket(130);
         } catch (Exception e) {
             System.err.println("go fuck yuor self");
         }
@@ -45,8 +45,8 @@ public class Server {
          a.start();
          
      }
-      
+        
 
-}   
-}
+    }
+   }
 
