@@ -59,6 +59,7 @@ public final class Server {
     }
     
     public void client_connect(Socket s1) {
+        //jcxgdxcvkb
         try {
             boolean while_flag = true;
             while (while_flag) {
