@@ -1,9 +1,11 @@
 package fourInline;
 
 
+
 import java.io.IOException;
-import java.util.Scanner;
 import server.Server;
+
+
 
 
 
@@ -21,48 +23,12 @@ public class FourInline00 {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException  {
         /*FourInlineBoard board1 = new FourInlineBoard();
         playGame(board1);*/
-       
+     
         Server a = new Server();
-    }
-    
-    public static void playGame(FourInlineBoard board){
-        
-        print p = new print();
-        //the first playr is false and the second is true
-        boolean turn = true;
-        int column;
-        
-        do {      
-            
-            p.printBoard(board);
-            
-            turn = !turn;
-            do {
-                column = getColumn(turn);//קריאה לשחקן להכניס נתון
-            } while (!board.isColumnLegal(column));//בדיקה אם אפשרי 
-
-            board.enterNewPiece(column, turn);
-        } while (!board.checkIfWon(column));
-
-        p.printBoard(board);
-        if (turn) {
-            System.out.println("player black won!!!!!!!!!");
-        } else {
-            System.out.println("player red won!!!!!!!!!");
-        }
-    }
-    
-    public static int getColumn(boolean turn) {
-        Scanner s = new Scanner(System.in);
-        if (turn) {
-            System.out.println("black enter column");
-        } else {
-            System.out.println("red enter column");
-        }
-
-        return s.nextInt();
+        a.runserver();
+               
     }
 }
